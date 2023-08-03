@@ -38,13 +38,13 @@ export class HomeComponent {
   }
 
   ngDoCheck(): void {
-    this.paginations(this.limit, this.page);
+    this.pagination(this.limit, this.page);
     console.log(this.searchValue);
   }
 
-  paginations(limit: number, page: number): void {
-    let startindex = (page - 1) * limit;
-    let endindex = limit * page;
+  pagination(limit: number, page: number): void {
+    let startIndex = (page - 1) * limit;
+    let endIndex = limit * page;
     this.dataSearch = this.data?.filter((job: Jobs) =>
       job.title.toLowerCase().includes(this.searchValue.toLowerCase())
     );
@@ -63,25 +63,24 @@ export class HomeComponent {
         1
       );
     }
-    
 
-    this.splitData = this.dataSearch?.slice(startindex, endindex);
+    this.splitData = this.dataSearch?.slice(startIndex, endIndex);
   }
   setPage(newPage: number): void {
     this.page = newPage;
   }
 
-  reviceValue($event: any): void {
+  receiveValue($event: any): void {
     this.searchValue = $event;
     this.page = 1;
   }
 
-  reciveSelectValue(event: string): void {
+  receiveSelectValue(event: string): void {
     this.selectValue = event;
-    console.log(event);
+    this.page = 1;
   }
-  reciveSelectValueLevel(event: string): void {
+  receiveSelectValueLevel(event: string): void {
     this.selectLevelValue = event;
-    console.log(event);
+    this.page = 1;
   }
 }
