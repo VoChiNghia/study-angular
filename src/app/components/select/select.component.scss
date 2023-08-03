@@ -1,0 +1,11 @@
+.select {
+    &__list{
+        border: 1px solid #ccc;
+        outline:none;
+        padding:10px;
+        margin: 0 10px;
+        &__item {
+            padding:5px;
+        }
+    }
+}

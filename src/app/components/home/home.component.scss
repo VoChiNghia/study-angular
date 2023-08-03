@@ -1,0 +1,36 @@
+.home__all-list{
+    margin:0 auto; ;
+    
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        h1{
+            margin: 20px 0;
+            span{
+                color: red;
+            }
+        }
+    }
+    .pagination{
+        ul{
+            list-style-type: none;
+            display: flex;
+           justify-content: center;
+           li{
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            &:hover {
+                background-color: rgba(255, 0, 0, 0.525);
+                color: #fff;
+            }
+            &.active {
+                background-color:rgba(255, 0, 0, 0.525);
+                color: #fff;
+            }
+           }
+        }
+    }
+}

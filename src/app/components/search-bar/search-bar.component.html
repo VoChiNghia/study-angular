@@ -1,0 +1,12 @@
+<div class="search">
+    <div class="search__title">
+        --- Search for jobs ---
+    </div>
+    <div class="search__control">
+        <div class="search__control__input">
+            <input type="text" placeholder="Search by title ..." [(ngModel)]="searchValue" (keydown.enter)="sendValue(searchValue)">
+            <div (click)="clearValue()">x</div>
+        </div>
+        <button (click)="sendValue(searchValue)" >Search</button>
+    </div>
+</div>

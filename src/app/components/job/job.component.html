@@ -1,0 +1,22 @@
+<div class="job container" *ngFor="let job of listJobs" (click)="navigateToDetail(job.id)">
+  <div class="job__left">
+    <img
+    *ngIf="job.avatar"
+    src="{{job.avatar}}"
+    alt="logo company"
+  />
+  <p  *ngIf="!job.avatar">No Image</p>
+ <div class="job__left__info">
+    <p class="job__left__info-title">{{job.title}}</p>
+    <ul>
+        <li>{{job.companyType}}</li>
+        <li>{{job.jobLevel}}</li>
+        <li>{{job.working}}</li>
+    </ul>
+ </div>
+  </div>
+  <div class="job__right">
+    <span class="job__right__status" [class.active]="job.status">Hot</span>
+    <p class="job__right__address">{{job.address}}</p>
+  </div>
+</div>

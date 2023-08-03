@@ -1,0 +1,33 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="detail">
+  <div class="detail__container container">
+    <div class="detail__container__top">
+      <h1>Recommend for you</h1>
+      <div>
+        <app-job [listJobs]="jobs"></app-job>
+      </div>
+    </div>
+
+    <div class="detail__container__body">
+      <div class="detail__container__body-title">
+        <img src="{{ detailJob?.avatar }}" alt="" />
+        <div>
+          <h1>{{ detailJob?.title }}</h1>
+          <p routerLink="/login">$ Sign in to view</p>
+        </div>
+      </div>
+
+      <button>Apply Now</button>
+
+      <h2>Detail Job</h2>
+      <ul>
+        <li><strong>Company Type: </strong>{{ detailJob?.companyType }}</li>
+        <li><strong>Created At: </strong>{{ detailJob?.createdAt | date }}</li>
+        <li><strong>Job Level: </strong>{{ detailJob?.jobLevel }}</li>
+        <li><strong>Salary Upto: </strong>{{ detailJob?.salary }}</li>
+        <li><strong>Working: </strong>{{ detailJob?.working }}</li>
+      </ul>
+      <p>{{ detailJob?.jobDesc }}</p>
+    </div>
+  </div>
+</div>

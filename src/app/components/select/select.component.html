@@ -1,0 +1,16 @@
+<div class="select">
+    <span>Thành Phố</span>
+    <select class="select__list" name="city" id="" [(ngModel)]="optionSelect" (change)="sendCityValue(optionSelect)">
+        <option class="select__list-item" value="">All City</option>
+        <option class="select__list-item" value="Hue">Huế</option>
+        <option class="select__list-item" value="Ho Chi Minh">Hồ Chính Minh</option>
+        <option class="select__list-item" value="Ha Noi">Hà Nội</option>
+    </select>
+    <span>Level</span>
+    <select class="select__list" name="level" id="" [(ngModel)]="slectLevel" (change)="sendLevelValue(slectLevel)">
+        <option class="select__list-item" value="" selected >All level</option>
+        <option class="select__list-item" value="fresher">Fresher</option>
+        <option class="select__list-item" value="Senior">Senior</option>
+        <option class="select__list-item" value="Senior">Manager</option>
+    </select>
+</div>

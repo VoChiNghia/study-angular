@@ -1,0 +1,23 @@
+<app-loading *ngIf="loading"></app-loading>
+<app-search-bar (value)="reviceValue($event)"></app-search-bar>
+<div class="home__all-list container">
+  <div class="home__all-list__title">
+    <h1>
+      Show All List <span>{{ dataSearch?.length }} results</span>
+    </h1>
+    <app-select (newEventSelectLevel)="reciveSelectValueLevel($event)" (newEventSelectCity)="reciveSelectValue($event)"></app-select>
+  </div>
+  <app-job [listJobs]="splitData"></app-job>
+
+  <div class="pagination">
+    <ul>
+      <li
+        *ngFor="let index of totalPages; let i = index"
+        [class.active]="i + 1 == page"
+        (click)="setPage(i + 1)"
+      >
+        {{ i + 1 }}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.search {
+    text-align: center;
+    padding: 20px 0;
+    &__title{
+        margin: 20px 0;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    &__control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__input {
+            position: relative;
+            input{
+                width: 500px;
+                border: 1px solid #ccc;
+                outline: none;
+                padding: 10px 20px;
+                border-radius: 3px;
+            }
+            div {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                background-color:#ccc;
+                color: gray;
+                padding:0 5px;
+                cursor: pointer;
+            }
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            background-color: red;
+            color: white;
+            margin: 0 10px;
+            &:focus{
+                animation: focus 0.2s ease;
+            }
+        }
+    }
+}
+
+@keyframes focus {
+    0%{
+        scale: 0.9;
+    }
+    100%{
+        scale: 1
+    }
+}
